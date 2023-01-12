@@ -24,7 +24,7 @@ drive.get("https://www.melon.com/mymusic/like/mymusiclikesong_list.htm?memberKey
 
 file = open("musicList.txt", "w", encoding="utf-8")
 
-print("init setting end!")
+print("init setting end")
 
 
 print("crawling")
