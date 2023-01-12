@@ -13,7 +13,7 @@ def pageCrawl():
             artist = artist.find_element(By.XPATH, "./div/div/a")
             artistName = artist.text
 
-            f.write(title.split(" 재생 - 새창")[0] + "|" + artistName + '\n')
+            file.write(title.split(" 재생 - 새창")[0] + "|" + artistName + '\n')
             print(title.split(" 재생 - 새창")[0] + "|" + artistName)
         except:
             print("error")
@@ -22,14 +22,14 @@ def pageCrawl():
 drive = webdriver.Chrome("C:\\Users\\dhals\\Downloads\\chromedriver.exe")
 drive.get("https://www.melon.com/mymusic/like/mymusiclikesong_list.htm?memberKey=17862859")
 
-f = open("musicList.txt", "a", encoding="utf-8")
+file = open("musicList.txt", "w", encoding="utf-8")
 
-print("init setting end")
+print("init setting end!")
 
 
 print("crawling")
 pageCrawl()
 print("end")
 
-f.close()
+file.close()
 
